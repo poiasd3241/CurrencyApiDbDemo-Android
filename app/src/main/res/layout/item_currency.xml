@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+        <!--Alpha-3 code.-->
+        <TextView
+            android:id="@+id/text_view_alpha3Code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USD"
+            android:textColor="@color/black"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+
+        <!--Value in RUB.-->
+        <TextView
+            android:id="@+id/text_view_value_in_rub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/text_view_alpha3Code"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/text_view_alpha3Code"
+            android:text="73.1019"
+            android:textColor="@color/black"
+            android:textSize="24dp" />
+
+        <!--RUB = 1 {alpha3Code}.-->
+        <TextView
+            android:id="@+id/text_view_denomination_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/text_view_value_in_rub"
+            android:layout_toEndOf="@id/text_view_value_in_rub"
+            android:text="RUB = 1 USD"
+            android:textColor="@color/black" />
+
+        <!--Currency name.-->
+        <TextView
+            android:id="@+id/text_view_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_alpha3Code"
+            android:layout_marginTop="4dp"
+            android:text="Доллар США"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

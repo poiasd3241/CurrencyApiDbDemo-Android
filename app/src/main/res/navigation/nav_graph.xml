@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fetchFragment">
+
+    <fragment
+        android:id="@+id/fetchFragment"
+        android:name="com.poiasd.currencyapidbdemo.ui.fetch.FetchFragment"
+        android:label="Currencies"
+        tools:layout="@layout/fragment_fetch">
+        <action
+            android:id="@+id/action_fetchFragment_to_convertFragment"
+            app:destination="@id/convertFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/convertFragment"
+        android:name="com.poiasd.currencyapidbdemo.ui.convert.ConvertFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_convert">
+        <argument
+            android:name="currency"
+            app:argType="com.poiasd.currencyapidbdemo.data.model.Currency" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+</navigation>
