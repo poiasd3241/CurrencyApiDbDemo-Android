@@ -5,6 +5,7 @@ Features:<br/>
 - Navigation between fragments
 - Database caching (library: Room)
 - Optimized data reload and UI state on configuration changes and activity restart
+- Kotlin coroutines and StateFlow
 
 Patterns:<br/>
 - MVVM
